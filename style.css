@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Jost';
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    z-index: 1;
+}
+
+.box {
+    width: 90%;
+    max-width: 700px;
+    background-color: #DEE3E9;
+    border: 1px solid #e7e7e7;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 50px;
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    background-color: #F4F5F4;
+    border-radius: 10px;
+}
+.item:nth-child(1) {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_546,c_limit/17ef5a28-0a32-4a69-8bcd-e5db782c5297/todo-lo-que-necesitas-saber-sobre-el-decatl%C3%B3n-en-atletismo.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url(https://www.apple.com/v/watch/shared/why-apple-watch/a/images/overview/fitness/fitness_activity_rings__dyuo7v3xlsya_large_2x.jpg);
+    background-size: cover;
+    background-position: calc(100% + 20px) 50%;
+    background-repeat: no-repeat;
+
+}
+
+.item:nth-child(3){
+    grid-row: span 4;
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.2,cs_srgb/w_1579,c_limit/fda94233-a08e-449f-9644-d25154817199/apple-watch-nike.jpg);
+    background-size: cover;
+    background-position: calc(100% - 70px) 30%;
+    
+
+}
+
+.item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url(https://i.blogs.es/dca6c5/sdes/1366_2000.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    
+}
+
+.item:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 2;
+    background-image: url(https://www.apple.com/es/apple-watch-nike/images/overview/hero__fasztbsytre6_large_2x.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-image: url(https://www.apple.com/v/siri/h/images/meta/siri__fsb5b98qe526_og.png?202403130742);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.item:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_500,c_limit/2b9e66a4-a6aa-472d-b28d-ea1714958e45/%C2%BFqu%C3%A9-significa-tener-cu%C3%A1driceps-dominantes-cuando-haces-running-y-cu%C3%A1les-son-los-riesgos.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.item:nth-child(8) {
+    grid-column: span 3;
+    grid-row: span 2;
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.2,cs_srgb/w_1483,c_limit/0a390ead-60d2-441d-9a1c-4f45e752bb11/apple-watch-nike.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.item:nth-child(9) {
+    grid-column: span 4;
+    grid-row: span 2;
+    background-image: url("assets/pertiganike.jpg");
+    background-size: cover;
+    background-position: top;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+footer {    
+    position: center;
+    text-align: center;
+}
+
+.item {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (width < 500px) {
+    .box {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 100px;
+    }
+
+    .item {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        height: auto;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}
